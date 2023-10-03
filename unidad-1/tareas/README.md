@@ -2,6 +2,8 @@
 
 # Gestión básica de Git
 
+### José Maximiliano Boada Martín
+
 ## Índice
 
 - [Tarea: Configuración](#index1)
