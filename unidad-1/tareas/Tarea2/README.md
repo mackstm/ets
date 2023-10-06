@@ -13,6 +13,9 @@
 - [Ejercicio 5](#ejercicio5)
 - [Ejercicio 6](#ejercicio6)
 - [Ejercicio 7](#ejercicio7)
+- [Ejercicio 8](#ejercicio8)
+- [Ejercicio 9](#ejercicio9)
+
 
 ## Ejercicio 1 <a name="ejercicio1"></a>
 
@@ -441,7 +444,7 @@ Indice de los cápitulos, con conceptos avanzados de git
 
 </details>
 
-<details> <summary>Pulse para ver los pasos<summary>
+<details> <summary>Pulse para ver los pasos</summary>
 
 - __cat indice.txt__
 - __git add .__
@@ -510,8 +513,464 @@ Crear una nueva rama bibliografía y mostrar las ramas del repositorio.
 - __git branch bibliografia__
 - __git branch -av__
 
+<details> <summary>Salida:</summary>
+
+```
+
+  bibliografia        0b325e1 Añadido el índice.
+* main                0b325e1 [ahead 5] Añadido el índice.
+  remotes/origin/1    3ea9800 se crea la carpeta img #1
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main 1016a8a se añade la segunda carpeta
+
+```
+
+</details>
+
+</details>
+
+## Ejercicio 6 <a name="ejercicio6"></a>
 
 
+- Crear el fichero capitulos/capitulo4.txt y añadir el texto siguiente:
+
+```code
+  En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+```
+
+- Añadir los cambios a la zona de intercambio temporal.
+- Hacer un commit con el mensaje “Añadido capítulo 4.”
+- Mostrar la historia del repositorio incluyendo todas las ramas.
+
+<details> <summary>Pulse para ver la solución</summary>
+
+```code
+
+cat > capitulos/capitulo4.txt
+En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+
+```
+
+__CTRL+D__
+
+```code
+
+git add .
+git commit -m "Añadido capítulo 4."
+git log --graph --all --oneline
+
+```
+
+</details>
+
+<details> <summary>Pulse para ver los pasos</summary>
+
+- __cat > capitulos/capitulo4.txt__
+
+<details> <summary>Escribir:</summary>
+
+```code
+
+En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+
+```
+
+</details>
+
+- __CTRL + D__
+- __git add .__
+- __git commit -m "Añadido capítulo 4."__
+
+<details> <summary>Salida:</summary>
+
+```code
+
+[main 1714600] Añadido capítulo 4.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/capitulo4.txt
+
+
+```
+
+</details>
+
+- __git git log --graph --all --oneline__
+
+<details> <summary>Salida:</summary>
+
+```code
+
+* 1714600 (HEAD -> main) Añadido capítulo 4.
+* 0b325e1 (bibliografia) Añadido el índice.
+* 2facaa7 Se crea el índice.
+* cc8b06d Añadido capítulo 3.
+* 0ddbfbe Añadido capítulo 2.
+* c3a2902 Añadido capitulo 1.
+* 1016a8a (origin/main, origin/HEAD) se añade la segunda carpeta
+* 3f26704 mensaje
+* 8a81c55 Se añade un título
+* fbe91b2 closed #1
+* 3ea9800 (origin/1) se crea la carpeta img #1
+* 4dcb74b Initial commit
+
+```
+
+</details>
+
+</details>
+
+## Ejercicio 7 <a name="ejercicio7"></a>
+
+
+- Cambiar a la rama bibliografía.
+- Crear el fichero bibliografia.txt y añadir la siguiente referencia:
+
+```
+Chacon, S. and Straub, B. Pro Git. Apress.
+```
+
+- Añadir los cambios a la zona de intercambio temporal.
+- Hacer un commit con el mensaje “Añadida primera referencia bibliográfica.”
+- Mostrar la historia del repositorio incluyendo todas las ramas.
+
+<details> <summary>Pulse para ver la solución</summary>
+
+```code
+git checkout bibliografia
+ cat > bibliografia.txt
+ - Chacon, S. and Straub, B. Pro Git. Apress.
+```
+
+__CTRL + D__
+
+```code
+git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
+```
+
+</details>
+
+<details> <summary>Pulse para ver los pasos</summary>
+
+- __git checkout bibliografia__
+- __cat > bibliografia.txt__
+
+<details> <summary>Escribir:</summary>
+
+```code
+- Chacon, S. and Straub, B. Pro Git. Apress.
+```
+
+</details>
+
+- __CTRL + D__
+- __git add .__
+- __git commit -m "Añadida primera referencia bibliográfica."__
+
+<details> <summary>Salida:</summary>
+
+```code
+[bibliografia c7d0853] Añadida primera referencia bibliográfica.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bibliografia.txt
+```
+
+</details>
+
+- __git log --graph --all --outline__
+
+<details> <summary>Salida:</summary>
+
+```code
+* c7d0853 (HEAD -> bibliografia) Añadida primera referencia bibliográfica.
+| * 1714600 (main) Añadido capítulo 4.
+|/  
+* 0b325e1 Añadido el índice.
+* 2facaa7 Se crea el índice.
+* cc8b06d Añadido capítulo 3.
+* 0ddbfbe Añadido capítulo 2.
+* c3a2902 Añadido capitulo 1.
+* 1016a8a (origin/main, origin/HEAD) se añade la segunda carpeta
+* 3f26704 mensaje
+* 8a81c55 Se añade un título
+* fbe91b2 closed #1
+* 3ea9800 (origin/1) se crea la carpeta img #1
+* 4dcb74b Initial commit
+```
+
+</details>
+
+</details>
+
+## Ejercicio 8 <a name="ejercicio8"></a>
+
+- Fusionar la rama bibliografía con la rama main.
+- Mostrar la historia del repositorio incluyendo todas las ramas.
+- Eliminar la rama bibliografía.
+- Mostrar de nuevo la historia del repositorio incluyendo todas las ramas.
+
+__Nota__: __git checkout__ Descarga/cambia de rama.
+
+<details> <summary>Pulse para ver la solución:</summary>
+
+ ```console
+  git checkout main
+  git merge bibliografia
+  git log --graph --all --oneline
+  git branch -d bibliografia
+  git log --graph --all --oneline
+ ```
+
+</details>
+
+<details> <summary>Pulse para ver los pasos:</summary>
+
+- __git checkout main__
+- __git merge bibliografia__
+
+<details> <summary>Salida:</summary>
+
+ ```code
+Merge made by the 'recursive' strategy.
+ bibliografia.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bibliografia.txt
+ ```
+
+</details>
+
+- __git log --graph --all --oneline__
+
+<details> <summary>Salida:</summary>
+
+ ```code
+*   3f65d9b (HEAD -> main) Merge branch 'bibliografia' into main
+|\  
+| * c7d0853 (bibliografia) Añadida primera referencia bibliográfica.
+* | 1714600 Añadido capítulo 4.
+|/  
+* 0b325e1 Añadido el índice.
+* 2facaa7 Se crea el índice.
+* cc8b06d Añadido capítulo 3.
+* 0ddbfbe Añadido capítulo 2.
+* c3a2902 Añadido capitulo 1.
+* 1016a8a (origin/main, origin/HEAD) se añade la segunda carpeta
+* 3f26704 mensaje
+* 8a81c55 Se añade un título
+* fbe91b2 closed #1
+* 3ea9800 (origin/1) se crea la carpeta img #1
+* 4dcb74b Initial commit
+
+ ```
+
+</details>
+
+- __git branch -d bibliografia__
+- __git log --graph --all --oneline__
+
+<details> <summary>Salida:</summary>
+
+ ```code
+*   3f65d9b (HEAD -> main) Merge branch 'bibliografia' into main
+|\  
+| * c7d0853 Añadida primera referencia bibliográfica.
+* | 1714600 Añadido capítulo 4.
+|/  
+* 0b325e1 Añadido el índice.
+* 2facaa7 Se crea el índice.
+* cc8b06d Añadido capítulo 3.
+* 0ddbfbe Añadido capítulo 2.
+* c3a2902 Añadido capitulo 1.
+* 1016a8a (origin/main, origin/HEAD) se añade la segunda carpeta
+* 3f26704 mensaje
+* 8a81c55 Se añade un título
+* fbe91b2 closed #1
+* 3ea9800 (origin/1) se crea la carpeta img #1
+* 4dcb74b Initial commit
+ ```
+
+</details>
+
+</details>
+
+## Ejercicio 9 <a name="ejercicio9"></a>
+
+- Crear la rama bibliografía.
+- Cambiar a la rama bibliografía.
+- Cambiar el fichero bibliografia.txt para que contenga las siguientes referencias:
+
+```code
+Scott Chacon and Ben Straub. Pro Git. Apress.
+Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)
+```
+
+- Cambiar a la rama main.
+- Cambiar el fichero bibliografia.txt para que  - contenga las siguientes referencias:
+
+```code
+Chacon, S. and Straub, B. Pro Git. Apress.
+Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+```
+
+- Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Añadida nueva referencia bibliográfica.”
+- Fusionar la rama bibliografía con la rama main.
+- Resolver el conflicto dejando el fichero bibliografia.txt con las referencias:
+
+```code
+Chacon, S. and Straub, B. Pro Git. Apress.
+Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)
+```
+- Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Resuelto conflicto de bibliografía.”
+- Mostrar la historia del repositorio incluyendo todas las ramas.
+
+<details> <summary>Pulse para ver la solución:</summary>
+
+ ```console
+ git branch bibliografia
+ git checkout bibliografia
+ cat > bibliografia.txt
+ - Scott Chacon and Ben Straub. Pro Git. Apress.
+ - Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)
+ ```
+ 
+__Ctrl+D__
+ 
+ ```code
+ git commit -a -m "Añadida nueva referencia bibliográfica."
+ git checkout main
+ cat > bibliografia.txt
+ - Chacon, S. and Straub, B. Pro Git. Apress.
+ - Loeliger, J. and McCullough, M. Version control with Git. O'Reilly.
+ ```
+ 
+__Ctrl+D__
+
+ ```code
+ git commit -a -m "Añadida nueva referencia bibliográfica."
+ git merge bibliografia
+ vi bibliografía.txt
+ # Hacer los cambios indicados en el fichero
+ git commit -a -m "Solucionado conflicto bibliografía."
+ git log --graph --all --oneline
+ ```
+
+ </details>
+
+<details> <summary>Pulse para ver los pasos</summary>
+
+- __git branch bibliografia__
+- __git checkout bibliografia__
+- __cat > bibliografia.txt__
+
+<details> <summary>Escribir:</summary>
+
+```code
+- Scott Chacon and Ben Straub. Pro Git. Apress.
+- Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)
+```
+
+</details>
+
+- __CTRL + D__
+- __git commit -a -m "Añadida nueva referencia bibliográfica.__
+
+<details> <summary>Salida:</summary>
+
+```code
+[bibliografia 64b383f] Añadida nueva referencia bibliográfica.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+```
+
+</details>
+
+- __git checkout main__
+- __cat > bibliografia.txt__
+
+<details> <summary>Escribir:</summary>
+
+```code
+- Chacon, S. and Straub, B. Pro Git. Apress.
+- Loeliger, J. and McCullough, M. Version control with Git. O'Reilly.
+```
+
+</details>
+
+- __git commit -a -m "Añadida nueva referencia bibliográfica."
+
+<details> <summary>Salida:</summary>
+
+```code
+[main b1a1a1e] Añadida nueva referencia bibliográfica.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+```
+
+</details>
+
+- __git merge bibliografia__
+
+<details> <summary>Salida:</summary>
+
+```code
+Auto-merging bibliografia.txt
+CONFLICT (content): Merge conflict in bibliografia.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+</details>
+
+- __vi bibliografía.txt__
+
+<details> <summary>Modificar:</summary>
+
+```code
+Chacon, S. and Straub, B. Pro Git. Apress.
+Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)
+```
+
+</details>
+
+- __git commit -a -m "Solucionado conflicto bibliografía"__
+
+<details> <summary>Salida:</summary>
+
+```code
+[main b3dafdf] Solucionado conflicto bibliografía.
+```
+
+</details>
+
+- __git log --graph --all --oneline__
+
+<details> <summary>Salida:</summary>
+
+```code
+*   b3dafdf (HEAD -> main) Solucionado conflicto bibliografía.
+|\  
+| * 64b383f (bibliografia) Añadida nueva referencia bibliográfica.
+* | b1a1a1e Añadida nueva referencia bibliográfica.
+|/  
+*   3f65d9b Merge branch 'bibliografia' into main
+|\  
+| * c7d0853 Añadida primera referencia bibliográfica.
+* | 1714600 Añadido capítulo 4.
+|/  
+* 0b325e1 Añadido el índice.
+* 2facaa7 Se crea el índice.
+* cc8b06d Añadido capítulo 3.
+* 0ddbfbe Añadido capítulo 2.
+* c3a2902 Añadido capitulo 1.
+* 1016a8a (origin/main, origin/HEAD) se añade la segunda carpeta
+* 3f26704 mensaje
+* 8a81c55 Se añade un título
+* fbe91b2 closed #1
+* 3ea9800 (origin/1) se crea la carpeta img #1
+* 4dcb74b Initial commit
+```
+
+</details>
 
 </details>
 
