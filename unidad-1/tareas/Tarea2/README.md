@@ -98,7 +98,7 @@ __Nota__: __git add__ permite añadir elementos al especio de intercambio. __git
 - __git commit -m "Añadido capítulo 1."__
 - __git log__
 
-<details> <summary>Salida:<summary>
+<details> <summary>Salida:</summary>
 
 ```code
   commit 3297b1f6f1778c24e159aa99d18bee2e6108370a (HEAD -> main)
@@ -144,6 +144,8 @@ __Nota__: __git add__ permite añadir elementos al especio de intercambio. __git
       Initial commit
 ```
 </details>
+
+
 
 </details>
 
