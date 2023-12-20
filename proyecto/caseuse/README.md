@@ -1,16 +1,24 @@
 <div align="justify">
 
-# Use Case Diagram and specifications
+# Use Case Diagram and specifications for library
 
-## Actors
+## Index
+- [Actors](#index01)
+- [Use Cases](#index02)
+- [Diagram](#index03)
+- [Actor Specifications](#index04)
+- [Use Case Specifications](#index05)
 
-## Use Cases
+## Actors <a name="index01"></a>
+- User
+- Librarian
+## Use Cases <a name="index02"></a>
 
-## Diagram
+## Diagram <a name="index03"></a>
 
 <img src="usecaselibrary.png"/>
 
-## Specs Actors
+## Actor Specifications <a name="index04"></a>
 
 | Actor | User |
 |---|---|
@@ -44,7 +52,7 @@
 | _Name_  | _Description_  | _Type_ |
 | | |
 
-## Specs Use Cases
+## Use Case Specifications <a name="index05"></a>
 
 | Use Case | XXX |
 |---|---|
