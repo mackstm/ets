@@ -14,11 +14,11 @@
 
 | Actor | User |
 |---|---|
-| Description  | User of library  |
+| Description  | User of library |
 | Characteristics  |  |
 | Relations |  |
 | References | _TBD_ |
-|  Notes |   |
+|  Notes |  |
 | Author  | José Maximiliano Boada Martín |
 | Date | 20/12/2023 |
 
@@ -33,9 +33,9 @@
 |---|---|
 | Description  | Librarian of library |
 | Characteristics  |  |
-| Relations |   |
+| Relations |  |
 | References | _TBD_ |
-|  Notes |   |
+|  Notes |  |
 | Author  | José Maximiliano Boada Martín |
 | Date | 20/12/2023 |
 
@@ -46,17 +46,17 @@
 
 ## Specs Use Cases
 
-| Use Case | XXX  |
+| Use Case | XXX |
 |---|---|
 | Source  | https://github.com/jpexposito/docencia/tree/master/Primero/ETS/PROYECTO  |
-| Actor  |  _Actores que participan en el caso de uso_ |
-| Description | _Descripción del caso de uso_  |
-| Basic flow | _Descripción paso a paso de la ejecución. (1->2->3.)_ |
-| Pre-conditions | _Que debe ocurrir con anterioridad_  |  
-| Post-conditions  | _Que debe ocurrir con posterioridad_  |  
-|  Requirements | _Que debe de exister para que el caso de uso se ejecute. Ej: Tarjeta de crédito_  |
-|  Notes |  _Notas adicionales_ |
+| Actor  |  |
+| Description |  |
+| Basic flow |  |
+| Pre-conditions |  |  
+| Post-conditions  |  |  
+|  Requirements |  |
+|  Notes |  |
 | Author  | José Maximiliano Boada Martín |
-| Date | _Fecha de la especificación_ |
+| Date |  |
 
 </div>
