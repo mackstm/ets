@@ -10,15 +10,23 @@
 - [Use Case Specifications](#index05)
 
 ## Actors <a name="index01"></a>
-- User
-- Librarian
+- [User](#actor1spec)
+- [Librarian](#actor2spec)
 ## Use Cases <a name="index02"></a>
+
+- User:
+    - CU1:
+    - CU2:
+    - CU3:
+    - CU4:
 
 ## Diagram <a name="index03"></a>
 
 <img src="usecaselibrary.png"/>
 
 ## Actor Specifications <a name="index04"></a>
+
+<a name="actor1spec"></a>
 
 | Actor | User |
 |---|---|
@@ -37,6 +45,8 @@
 | id | ID of user | String
 | loanHistory | Name of user | List\<Loan>
 
+<a name="actor2spec"></a>
+
 | Actor | Librarian |
 |---|---|
 | Description  | Librarian of library |
@@ -54,7 +64,7 @@
 
 ## Use Case Specifications <a name="index05"></a>
 
-| Use Case | XXX |
+| Use Case | XXX | 
 |---|---|
 | Source  | https://github.com/jpexposito/docencia/tree/master/Primero/ETS/PROYECTO  |
 | Actor  |  |
