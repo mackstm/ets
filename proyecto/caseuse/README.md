@@ -7,18 +7,45 @@
 - [Use Cases](#index02)
 - [Diagram](#index03)
 - [Actor Specifications](#index04)
+    - [User](#actor1spec)
+    - [Librarian](#actor2spec)
 - [Use Case Specifications](#index05)
+    - [UC1](uc01)
+    - [UC2](uc02)
+    - [UC3](uc03)
+    - [UC4](uc04)
+    - [UC5](uc05)
+    - [UC6](uc06)
+    - [UC7](uc07)
+    - [UC8](uc08)
+    - [UC9](uc09)
+    - [UC10](uc10)
+    - [UC11](uc11)
+    - [UC12](uc12)
+    - [UC13](uc13)
+    - [UC14](uc14)
 
 ## Actors <a name="index01"></a>
-- [User](#actor1spec)
-- [Librarian](#actor2spec)
+- User
+- Librarian
 ## Use Cases <a name="index02"></a>
 
 - User:
-    - CU1:
-    - CU2:
-    - CU3:
-    - CU4:
+    - UC1:
+    - UC2:
+    - UC3:
+    - UC4:
+    - UC5:
+    - UC6:
+    - UC7:
+    - UC8:
+    - UC9:
+- Librarian:
+    - UC10:
+    - UC11:
+    - UC12:
+    - UC13:
+    - UC14:
 
 ## Diagram <a name="index03"></a>
 
@@ -63,6 +90,8 @@
 | | |
 
 ## Use Case Specifications <a name="index05"></a>
+
+<a name="uc01"></a>
 
 | Use Case | XXX | 
 |---|---|
