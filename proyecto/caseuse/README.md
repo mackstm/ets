@@ -93,7 +93,7 @@
 
 <a name="uc01"></a>
 
-| Use Case | XXX | 
+| Use Case |  | 
 |---|---|
 | Source  | https://github.com/jpexposito/docencia/tree/master/Primero/ETS/PROYECTO  |
 | Actor  |  |
