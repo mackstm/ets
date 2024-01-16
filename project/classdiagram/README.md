@@ -5,7 +5,7 @@
 ## Index
 - [Classes](#index01)
 - [Diagram](#index02)
-- [Diagram](#index03)
+- [Pseudocode](#index03)
 
 ## Classes <a name="index01"></a>
 
@@ -26,7 +26,7 @@ Click on any of the classes to view their pseudocode.
 
 <img src="classdiagramlibrary.png"></img>
 
-## Pseudocode <a name="index01"></a>
+## Pseudocode <a name="index03"></a>
 
 ### Book <a name="class01"></a>
 
