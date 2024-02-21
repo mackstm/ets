@@ -1,7 +1,6 @@
 package es.iespuerto.ets.modelo;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -42,6 +41,17 @@ public class LibroTest {
         Assertions.assertEquals(tituloUpdate, libro.getTitulo(), "Resultado no esperado");
         Assertions.assertEquals(autorUpdate, libro.getAutor(), "Resultado no esperado");
         Assertions.assertEquals(fPublicacionUpdate, libro.getfPublicacion(), "Resultado no esperado");
+    }
+
+    @Test
+    public void hashcodeTest() {
+        Assertions.assertEquals(isbn.hashCode(), libro.hashCode(), "Resultado no esperado");
+    }
+
+    @Test
+    public void equalsTest() {
+        Libro libroEquals = new Libro(isbn);
+        Assertions.assertEquals(libroEquals, libro, "Resultado inesperado");
     }
 
     @Test
