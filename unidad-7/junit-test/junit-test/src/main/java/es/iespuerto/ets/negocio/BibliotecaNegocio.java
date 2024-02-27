@@ -48,9 +48,9 @@ public class BibliotecaNegocio {
         if (existeLibro(libro)) {
             int posicion = biblioteca.getLibros().indexOf(libro);
             biblioteca.getLibros().add(posicion, libro);
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     public boolean existeLibro(Libro libro) {

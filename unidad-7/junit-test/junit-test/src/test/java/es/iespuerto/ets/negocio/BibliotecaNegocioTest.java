@@ -57,12 +57,28 @@ public class BibliotecaNegocioTest {
     }
 
     @Test
+    public void eliminarLibroNoExisteTest() {
+        Libro libroEliminar = new Libro("papa");
+        bibliotecaNegocio.eliminarLibro(libroEliminar);
+        Assertions.assertEquals(1, bibliotecaNegocio.obtenerLibros().size(),
+                "Resultado no esperado");
+    }
+
+    @Test
     public void actualizarLibroTest() {
         String otroTitulo = "Abuacate";
         libro.setTitulo(otroTitulo);
-        Assertions.assertTrue(bibliotecaNegocio.actualizarLibro(libro), "Resultado no esperado");
+        Assertions.assertFalse(bibliotecaNegocio.actualizarLibro(libro), "Resultado no esperado");
         Libro libroBuscar = new Libro(nombre);
         libroBuscar = bibliotecaNegocio.obtenerLibro(libroBuscar);
         Assertions.assertEquals(otroTitulo, libroBuscar.getTitulo(), "No se ha obtenido el texto esperado");
+    }
+
+    @Test
+    public void actualizarLibroNoExisteTest() {
+        String otroTitulo = "Abuacate";
+        Libro libroActualizar = new Libro("papa");
+        libroActualizar.setTitulo(otroTitulo);
+        Assertions.assertTrue(bibliotecaNegocio.actualizarLibro(libroActualizar), "Resultado no esperado");
     }
 }
